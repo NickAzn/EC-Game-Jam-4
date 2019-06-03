@@ -35,3 +35,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# SteamVR
+SteamVR/
+
+# TMP
+/TextMesh Pro
