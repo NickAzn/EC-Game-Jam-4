@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    public AudioClip electricHitSound;
+    public AudioClip routerPassSound;
+
     private void OnTriggerEnter(Collider other) {
         Debug.Log("Head collided with " + other.tag);
         if (other.tag == "Router") {
@@ -21,8 +24,10 @@ public class Player : MonoBehaviour {
                     LevelManager.instance.WinGame();
                 }
             }
+            SoundManager.instance.PlaySfx(routerPassSound);
         } else if (other.tag == "Dodge") {
             LevelManager.instance.PlayerElectricHit(15);
+            SoundManager.instance.PlaySfx(electricHitSound);
         }
     }
 }

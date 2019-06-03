@@ -9,6 +9,7 @@ public class Shield : MonoBehaviour {
     public bool leftHand;
 
     public SteamVR_Action_Vibration hapticAction;
+    public AudioClip blockSound;
 
     private void OnTriggerEnter(Collider other) {
         Debug.Log("Shield collided with " + other.tag);
@@ -21,6 +22,7 @@ public class Shield : MonoBehaviour {
             } else {
                 hapticAction.Execute(0, 0.2f, 100, 12, SteamVR_Input_Sources.RightHand);
             }
+            SoundManager.instance.PlaySfx(blockSound);
         }
     }
 }
