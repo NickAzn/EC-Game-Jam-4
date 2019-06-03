@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.ecgamejam4.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "D:\\Git\\EC Game Jam 4\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "EC Game Jam 4 [Testing]"
+        }
+      }
+    }
+  ]
+}
